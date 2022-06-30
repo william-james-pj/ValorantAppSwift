@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E0955CFD286DCA9E007CE233 /* MenuSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955CFC286DCA9E007CE233 /* MenuSegmentedControl.swift */; };
+		E0955CFF286DDA6F007CE233 /* WeaponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955CFE286DDA6F007CE233 /* WeaponCollectionViewCell.swift */; };
+		E0955D01286DDC89007CE233 /* WeaponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955D00286DDC89007CE233 /* WeaponModel.swift */; };
 		E0CDAA6D286CAFA9002817C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA6C286CAFA9002817C1 /* AppDelegate.swift */; };
 		E0CDAA6F286CAFA9002817C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA6E286CAFA9002817C1 /* SceneDelegate.swift */; };
 		E0CDAA71286CAFA9002817C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA70286CAFA9002817C1 /* ViewController.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		E0955CFC286DCA9E007CE233 /* MenuSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSegmentedControl.swift; sourceTree = "<group>"; };
+		E0955CFE286DDA6F007CE233 /* WeaponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0955D00286DDC89007CE233 /* WeaponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponModel.swift; sourceTree = "<group>"; };
 		E0CDAA69286CAFA9002817C1 /* Valorant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valorant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CDAA6C286CAFA9002817C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0CDAA6E286CAFA9002817C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				E0CDAAC0286CBD2C002817C1 /* AgentsModel.swift */,
+				E0955D00286DDC89007CE233 /* WeaponModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				E0CDAABE286CB720002817C1 /* AgentCollectionViewCell.swift */,
+				E0955CFE286DDA6F007CE233 /* WeaponCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0CDAAA8286CB190002817C1 /* InteractorInterface.swift in Sources */,
+				E0955CFF286DDA6F007CE233 /* WeaponCollectionViewCell.swift in Sources */,
 				E0CDAA71286CAFA9002817C1 /* ViewController.swift in Sources */,
 				E0CDAAAC286CB1C6002817C1 /* ViewInterface.swift in Sources */,
 				E0CDAAB2286CB24A002817C1 /* HomeInteractor.swift in Sources */,
@@ -373,6 +380,7 @@
 				E0CDAAC1286CBD2C002817C1 /* AgentsModel.swift in Sources */,
 				E0CDAAA6286CB14E002817C1 /* UIViewController+extension.swift in Sources */,
 				E0CDAA6D286CAFA9002817C1 /* AppDelegate.swift in Sources */,
+				E0955D01286DDC89007CE233 /* WeaponModel.swift in Sources */,
 				E0CDAA6F286CAFA9002817C1 /* SceneDelegate.swift in Sources */,
 				E0CDAAAA286CB1A8002817C1 /* PresenterInterface.swift in Sources */,
 				E0CDAABC286CB387002817C1 /* HomeViewController.swift in Sources */,

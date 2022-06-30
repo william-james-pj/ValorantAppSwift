@@ -17,14 +17,16 @@ protocol HomeViewInterface: ViewInterface {
     var presenter: HomePresenterInterface? { get set }
     
     func updateWithAgent(_ agents: [AgentModel])
+    func updateWithWeapon(_ weapons: [WeaponModel])
 }
 
 class HomeViewController: UIViewController, HomeViewInterface {
     // MARK: - Variables
     var presenter: HomePresenterInterface?
     fileprivate var agentsData: [AgentModel] = []
+    fileprivate var weaponsData: [WeaponModel] = []
     fileprivate var menuSubscriber: AnyCancellable?
-    fileprivate var collectItemSelected: CollectItemType = .agent
+    fileprivate var collectionItemSelected: CollectItemType = .agent
     
     // MARK: - Components
     fileprivate let stackBase: UIStackView = {
@@ -104,11 +106,12 @@ class HomeViewController: UIViewController, HomeViewInterface {
         
         menuSubscriber = self.menuSegmentedControl.$indexSelected.sink { indexSelected in
             if indexSelected == 0 {
-                self.collectItemSelected = .agent
-                return
+                self.collectionItemSelected = .agent
             }
-            
-            self.collectItemSelected = .weapon
+            else {
+                self.collectionItemSelected = .weapon
+            }
+            self.collectionViewHome.reloadData()
         }
         
         buildHierarchy()
@@ -121,6 +124,7 @@ class HomeViewController: UIViewController, HomeViewInterface {
         collectionViewHome.delegate = self
 
         collectionViewHome.register(AgentCollectionViewCell.self, forCellWithReuseIdentifier: AgentCollectionViewCell.resuseIdentifier)
+        collectionViewHome.register(WeaponCollectionViewCell.self, forCellWithReuseIdentifier: WeaponCollectionViewCell.resuseIdentifier)
     }
     
     // MARK: - Methods
@@ -128,6 +132,12 @@ class HomeViewController: UIViewController, HomeViewInterface {
         DispatchQueue.main.async {
             self.agentsData = agents
             self.collectionViewHome.reloadData()
+        }
+    }
+    
+    func updateWithWeapon(_ weapons: [WeaponModel]) {
+        DispatchQueue.main.async {
+            self.weaponsData = weapons
         }
     }
     
@@ -168,12 +178,21 @@ extension HomeViewController: UICollectionViewDelegate {
 // MARK: - extension CollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.agentsData.count
+        if self.collectionItemSelected == .agent {
+            return self.agentsData.count
+        }
+        return self.weaponsData.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AgentCollectionViewCell.resuseIdentifier, for: indexPath) as! AgentCollectionViewCell
-        cell.settingCell(agent: self.agentsData[indexPath.row])
+        if self.collectionItemSelected == .agent {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AgentCollectionViewCell.resuseIdentifier, for: indexPath) as! AgentCollectionViewCell
+            cell.settingCell(agent: self.agentsData[indexPath.row])
+            return cell
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WeaponCollectionViewCell.resuseIdentifier, for: indexPath) as! WeaponCollectionViewCell
+        cell.settingCell(weapon: self.weaponsData[indexPath.row])
         return cell
     }
 }

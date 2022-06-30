@@ -11,6 +11,7 @@ protocol HomeInteractorInterface: InteractorInterface {
     var presenter: HomePresenterInterface? { get set }
     
     func getAgents()
+    func getWeapons()
 }
 
 class HomeInteractor: HomeInteractorInterface {
@@ -35,6 +36,29 @@ class HomeInteractor: HomeInteractorInterface {
             }
             catch {
                 self?.presenter?.interactorDidFetchAgents(with: .failure(error))
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func getWeapons() {
+        guard let url = URL(string: "https://valorant-api.com/v1/weapons") else {
+            return
+        }
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: url) { [weak self] data, _, error in
+            guard let data = data, error == nil else {
+                self?.presenter?.interactorDidFetchWeapons(with: .failure(FetchError.failed))
+                return
+            }
+            
+            do {
+                let response = try JSONDecoder().decode(WeaponAPIResult.self, from: data)
+                self?.presenter?.interactorDidFetchWeapons(with: .success(response.data))
+            }
+            catch {
+                self?.presenter?.interactorDidFetchWeapons(with: .failure(error))
             }
         }
         

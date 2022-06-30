@@ -39,7 +39,7 @@ class AgentCollectionViewCell: UICollectionViewCell {
     
     fileprivate let labelName: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .bold)
+        label.font = .systemFont(ofSize: 14, weight: .bold)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -78,7 +78,7 @@ class AgentCollectionViewCell: UICollectionViewCell {
             self.loadImage(url: url)
         }
         
-        self.labelName.text = agent.displayName
+        self.labelName.text = agent.displayName.uppercased()
         
     }
     

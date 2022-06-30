@@ -17,6 +17,7 @@ protocol HomePresenterInterface: PresenterInterface {
     var view: HomeViewInterface? { get set }
     
     func interactorDidFetchAgents(with result: Result<[AgentModel], Error>)
+    func interactorDidFetchWeapons(with result: Result<[WeaponModel], Error>)
 }
 
 class HomePresenter: HomePresenterInterface {
@@ -25,6 +26,7 @@ class HomePresenter: HomePresenterInterface {
     var interactor: HomeInteractorInterface? {
         didSet {
             interactor?.getAgents()
+            interactor?.getWeapons()
         }
     }
     var view: HomeViewInterface?
@@ -34,6 +36,15 @@ class HomePresenter: HomePresenterInterface {
         switch result {
         case .success(let dataContainer):
             self.view?.updateWithAgent(dataContainer)
+        case .failure(let error):
+            print(error.localizedDescription)
+        }
+    }
+    
+    func interactorDidFetchWeapons(with result: Result<[WeaponModel], Error>) {
+        switch result {
+        case .success(let dataContainer):
+            self.view?.updateWithWeapon(dataContainer)
         case .failure(let error):
             print(error.localizedDescription)
         }
