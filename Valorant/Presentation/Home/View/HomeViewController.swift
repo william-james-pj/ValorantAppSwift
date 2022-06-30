@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import Combine
+
+enum CollectItemType {
+    case agent
+    case weapon
+}
 
 protocol HomeViewInterface: ViewInterface {
     var presenter: HomePresenterInterface? { get set }
@@ -17,12 +23,14 @@ class HomeViewController: UIViewController, HomeViewInterface {
     // MARK: - Variables
     var presenter: HomePresenterInterface?
     fileprivate var agentsData: [AgentModel] = []
+    fileprivate var menuSubscriber: AnyCancellable?
+    fileprivate var collectItemSelected: CollectItemType = .agent
     
     // MARK: - Components
     fileprivate let stackBase: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.spacing = 16
+        stack.spacing = 32
         stack.distribution = .fill
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
@@ -42,6 +50,28 @@ class HomeViewController: UIViewController, HomeViewInterface {
         return imageView
     }()
     
+    fileprivate let menuSegmentedControl: MenuSegmentedControl = {
+        let segmentedControl = MenuSegmentedControl()
+        segmentedControl.setButtonTitles(buttonTitles: ["Agents", "Weapons"])
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        return segmentedControl
+    }()
+    
+    fileprivate let viewMenuAux: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    fileprivate let stackMenu: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.spacing = 8
+        stack.distribution = .fill
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
     fileprivate let collectionViewHome: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -53,6 +83,15 @@ class HomeViewController: UIViewController, HomeViewInterface {
         return collectionView
     }()
     
+    fileprivate let stackContent: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 16
+        stack.distribution = .fill
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +101,16 @@ class HomeViewController: UIViewController, HomeViewInterface {
     // MARK: - Setup
     fileprivate func setupVC() {
         view.backgroundColor = UIColor(named: "Backgroud")
+        
+        menuSubscriber = self.menuSegmentedControl.$indexSelected.sink { indexSelected in
+            if indexSelected == 0 {
+                self.collectItemSelected = .agent
+                return
+            }
+            
+            self.collectItemSelected = .weapon
+        }
+        
         buildHierarchy()
         buildConstraints()
         setupCollection()
@@ -71,7 +120,7 @@ class HomeViewController: UIViewController, HomeViewInterface {
         collectionViewHome.dataSource = self
         collectionViewHome.delegate = self
 
-        collectionViewHome.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.resuseIdentifier)
+        collectionViewHome.register(AgentCollectionViewCell.self, forCellWithReuseIdentifier: AgentCollectionViewCell.resuseIdentifier)
     }
     
     // MARK: - Methods
@@ -84,9 +133,15 @@ class HomeViewController: UIViewController, HomeViewInterface {
     
     fileprivate func buildHierarchy() {
         view.addSubview(stackBase)
+        
         stackBase.addArrangedSubview(viewHeader)
-        viewHeader.addSubview(imageViewHeader)
-        stackBase.addArrangedSubview(collectionViewHome)
+            viewHeader.addSubview(imageViewHeader)
+        
+        stackBase.addArrangedSubview(stackContent)
+        stackContent.addArrangedSubview(stackMenu)
+            stackMenu.addArrangedSubview(menuSegmentedControl)
+            stackMenu.addArrangedSubview(viewMenuAux)
+        stackContent.addArrangedSubview(collectionViewHome)
     }
     
     fileprivate func buildConstraints() {
@@ -117,7 +172,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.resuseIdentifier, for: indexPath) as! HomeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AgentCollectionViewCell.resuseIdentifier, for: indexPath) as! AgentCollectionViewCell
         cell.settingCell(agent: self.agentsData[indexPath.row])
         return cell
     }

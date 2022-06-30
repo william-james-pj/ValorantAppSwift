@@ -1,5 +1,5 @@
 //
-//  HomeCollectionViewCell.swift
+//  AgentCollectionViewCell.swift
 //  Valorant
 //
 //  Created by Pinto Junior, William James on 29/06/22.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class HomeCollectionViewCell: UICollectionViewCell {
+class AgentCollectionViewCell: UICollectionViewCell {
     // MARK: - Constants
-    static let resuseIdentifier: String = "HomeCollectionViewCell"
+    static let resuseIdentifier: String = "AgentCollectionViewCell"
     
     // MARK: - Variables
     
@@ -106,7 +106,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension HomeCollectionViewCell {
+extension AgentCollectionViewCell {
     func hexStringToUIColor (hex:String) -> UIColor {
         let r, g, b, a: CGFloat
         
@@ -131,7 +131,7 @@ extension HomeCollectionViewCell {
     }
 }
 
-extension HomeCollectionViewCell {
+extension AgentCollectionViewCell {
     func setGradientBackground(_ colors: [CGColor]) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colors[0], colors[3]]
@@ -142,7 +142,7 @@ extension HomeCollectionViewCell {
     }
 }
 
-extension HomeCollectionViewCell {
+extension AgentCollectionViewCell {
     fileprivate func loadImage(url: URL){
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {

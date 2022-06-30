@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0955CFD286DCA9E007CE233 /* MenuSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955CFC286DCA9E007CE233 /* MenuSegmentedControl.swift */; };
 		E0CDAA6D286CAFA9002817C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA6C286CAFA9002817C1 /* AppDelegate.swift */; };
 		E0CDAA6F286CAFA9002817C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA6E286CAFA9002817C1 /* SceneDelegate.swift */; };
 		E0CDAA71286CAFA9002817C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA70286CAFA9002817C1 /* ViewController.swift */; };
@@ -26,7 +27,7 @@
 		E0CDAAB4286CB260002817C1 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAB3286CB260002817C1 /* HomePresenter.swift */; };
 		E0CDAAB9286CB282002817C1 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAB8286CB282002817C1 /* HomeWireframe.swift */; };
 		E0CDAABC286CB387002817C1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAABB286CB387002817C1 /* HomeViewController.swift */; };
-		E0CDAABF286CB720002817C1 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAABE286CB720002817C1 /* HomeCollectionViewCell.swift */; };
+		E0CDAABF286CB720002817C1 /* AgentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAABE286CB720002817C1 /* AgentCollectionViewCell.swift */; };
 		E0CDAAC1286CBD2C002817C1 /* AgentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAC0286CBD2C002817C1 /* AgentsModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0955CFC286DCA9E007CE233 /* MenuSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSegmentedControl.swift; sourceTree = "<group>"; };
 		E0CDAA69286CAFA9002817C1 /* Valorant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valorant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CDAA6C286CAFA9002817C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0CDAA6E286CAFA9002817C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +73,7 @@
 		E0CDAAB3286CB260002817C1 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		E0CDAAB8286CB282002817C1 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		E0CDAABB286CB387002817C1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E0CDAABE286CB720002817C1 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0CDAABE286CB720002817C1 /* AgentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0CDAAC0286CBD2C002817C1 /* AgentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 			children = (
 				E0CDAAA0286CB0E8002817C1 /* Extensions */,
 				E0CDAAA1286CB0F9002817C1 /* Interface */,
+				E0955CFC286DCA9E007CE233 /* MenuSegmentedControl.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -222,7 +225,7 @@
 		E0CDAABD286CB68D002817C1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				E0CDAABE286CB720002817C1 /* HomeCollectionViewCell.swift */,
+				E0CDAABE286CB720002817C1 /* AgentCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -365,7 +368,8 @@
 				E0CDAAAE286CB1E1002817C1 /* WireframeInterface.swift in Sources */,
 				E0CDAAB9286CB282002817C1 /* HomeWireframe.swift in Sources */,
 				E0CDAAA4286CB11E002817C1 /* UINavigationController+extension.swift in Sources */,
-				E0CDAABF286CB720002817C1 /* HomeCollectionViewCell.swift in Sources */,
+				E0955CFD286DCA9E007CE233 /* MenuSegmentedControl.swift in Sources */,
+				E0CDAABF286CB720002817C1 /* AgentCollectionViewCell.swift in Sources */,
 				E0CDAAC1286CBD2C002817C1 /* AgentsModel.swift in Sources */,
 				E0CDAAA6286CB14E002817C1 /* UIViewController+extension.swift in Sources */,
 				E0CDAA6D286CAFA9002817C1 /* AppDelegate.swift in Sources */,
