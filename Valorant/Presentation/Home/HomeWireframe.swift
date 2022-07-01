@@ -9,6 +9,8 @@ import Foundation
 
 protocol HomeWireframeInterface: WireframeInterface {
     static func start() -> HomeWireframeInterface
+    
+    func navigateToSeeAgent(agent: AgentModel)
 }
 
 class HomeWireframe: HomeWireframeInterface {
@@ -34,5 +36,10 @@ class HomeWireframe: HomeWireframeInterface {
         router.entry = view as? EntryPoint
         
         return router
+    }
+    
+    func navigateToSeeAgent(agent: AgentModel) {
+        let seeAgent = SeeAgentWireframe.start(agent: agent)
+        entry?.presentWireframe(seeAgent, animated: true, completion: nil)
     }
 }

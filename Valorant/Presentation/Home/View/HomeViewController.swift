@@ -173,6 +173,13 @@ class HomeViewController: UIViewController, HomeViewInterface {
 
 // MARK: - extension UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if self.collectionItemSelected == .agent {
+            self.presenter?.seeAgent(agent: self.agentsData[indexPath.row])
+            return
+        }
+        return
+    }
 }
 
 // MARK: - extension CollectionViewDataSource

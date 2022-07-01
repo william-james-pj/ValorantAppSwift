@@ -19,4 +19,12 @@ struct AgentModel: Codable {
     let backgroundGradientColors: [String]?
     let bustPortrait: String?
     let fullPortrait: String?
+    let fullPortraitV2: String?
+    let abilities: [AbilitiesAgentModel]
+}
+
+struct AbilitiesAgentModel: Codable {
+    let displayName: String
+    let description: String
+    let displayIcon: String?
 }

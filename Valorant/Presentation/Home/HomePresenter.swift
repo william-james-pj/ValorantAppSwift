@@ -16,6 +16,7 @@ protocol HomePresenterInterface: PresenterInterface {
     var interactor: HomeInteractorInterface? { get set }
     var view: HomeViewInterface? { get set }
     
+    func seeAgent(agent: AgentModel)
     func interactorDidFetchAgents(with result: Result<[AgentModel], Error>)
     func interactorDidFetchWeapons(with result: Result<[WeaponModel], Error>)
 }
@@ -32,6 +33,10 @@ class HomePresenter: HomePresenterInterface {
     var view: HomeViewInterface?
     
     // MARK: - Methods
+    func seeAgent(agent: AgentModel) {
+        self.wireframe?.navigateToSeeAgent(agent: agent)
+    }
+    
     func interactorDidFetchAgents(with result: Result<[AgentModel], Error>) {
         switch result {
         case .success(let dataContainer):
