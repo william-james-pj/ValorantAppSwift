@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0955CFD286DCA9E007CE233 /* MenuSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955CFC286DCA9E007CE233 /* MenuSegmentedControl.swift */; };
+		E0955CFF286DDA6F007CE233 /* WeaponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955CFE286DDA6F007CE233 /* WeaponCollectionViewCell.swift */; };
+		E0955D01286DDC89007CE233 /* WeaponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955D00286DDC89007CE233 /* WeaponModel.swift */; };
+		E0955D05286DEB10007CE233 /* SeeAgentWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955D04286DEB10007CE233 /* SeeAgentWireframe.swift */; };
+		E0955D07286DEB24007CE233 /* SeeAgentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955D06286DEB24007CE233 /* SeeAgentPresenter.swift */; };
+		E0955D0A286DEC9D007CE233 /* SeeAgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0955D09286DEC9D007CE233 /* SeeAgentViewController.swift */; };
+		E0BED421286F2B3C00FE75B7 /* AbilitiesSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BED420286F2B3C00FE75B7 /* AbilitiesSegmentedControl.swift */; };
+		E0BED423286F529D00FE75B7 /* ViewAbilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BED422286F529D00FE75B7 /* ViewAbilities.swift */; };
 		E0CDAA6D286CAFA9002817C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA6C286CAFA9002817C1 /* AppDelegate.swift */; };
 		E0CDAA6F286CAFA9002817C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA6E286CAFA9002817C1 /* SceneDelegate.swift */; };
 		E0CDAA71286CAFA9002817C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA70286CAFA9002817C1 /* ViewController.swift */; };
@@ -16,6 +24,18 @@
 		E0CDAA84286CAFAD002817C1 /* ValorantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA83286CAFAD002817C1 /* ValorantTests.swift */; };
 		E0CDAA8E286CAFAD002817C1 /* ValorantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA8D286CAFAD002817C1 /* ValorantUITests.swift */; };
 		E0CDAA90286CAFAD002817C1 /* ValorantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAA8F286CAFAD002817C1 /* ValorantUITestsLaunchTests.swift */; };
+		E0CDAAA4286CB11E002817C1 /* UINavigationController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAA3286CB11E002817C1 /* UINavigationController+extension.swift */; };
+		E0CDAAA6286CB14E002817C1 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAA5286CB14E002817C1 /* UIViewController+extension.swift */; };
+		E0CDAAA8286CB190002817C1 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAA7286CB190002817C1 /* InteractorInterface.swift */; };
+		E0CDAAAA286CB1A8002817C1 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAA9286CB1A8002817C1 /* PresenterInterface.swift */; };
+		E0CDAAAC286CB1C6002817C1 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAAB286CB1C6002817C1 /* ViewInterface.swift */; };
+		E0CDAAAE286CB1E1002817C1 /* WireframeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAAD286CB1E1002817C1 /* WireframeInterface.swift */; };
+		E0CDAAB2286CB24A002817C1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAB1286CB24A002817C1 /* HomeInteractor.swift */; };
+		E0CDAAB4286CB260002817C1 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAB3286CB260002817C1 /* HomePresenter.swift */; };
+		E0CDAAB9286CB282002817C1 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAB8286CB282002817C1 /* HomeWireframe.swift */; };
+		E0CDAABC286CB387002817C1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAABB286CB387002817C1 /* HomeViewController.swift */; };
+		E0CDAABF286CB720002817C1 /* AgentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAABE286CB720002817C1 /* AgentCollectionViewCell.swift */; };
+		E0CDAAC1286CBD2C002817C1 /* AgentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CDAAC0286CBD2C002817C1 /* AgentsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0955CFC286DCA9E007CE233 /* MenuSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSegmentedControl.swift; sourceTree = "<group>"; };
+		E0955CFE286DDA6F007CE233 /* WeaponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0955D00286DDC89007CE233 /* WeaponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponModel.swift; sourceTree = "<group>"; };
+		E0955D04286DEB10007CE233 /* SeeAgentWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAgentWireframe.swift; sourceTree = "<group>"; };
+		E0955D06286DEB24007CE233 /* SeeAgentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAgentPresenter.swift; sourceTree = "<group>"; };
+		E0955D09286DEC9D007CE233 /* SeeAgentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAgentViewController.swift; sourceTree = "<group>"; };
+		E0BED420286F2B3C00FE75B7 /* AbilitiesSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilitiesSegmentedControl.swift; sourceTree = "<group>"; };
+		E0BED422286F529D00FE75B7 /* ViewAbilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAbilities.swift; sourceTree = "<group>"; };
 		E0CDAA69286CAFA9002817C1 /* Valorant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valorant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CDAA6C286CAFA9002817C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0CDAA6E286CAFA9002817C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +77,18 @@
 		E0CDAA89286CAFAD002817C1 /* ValorantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValorantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CDAA8D286CAFAD002817C1 /* ValorantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantUITests.swift; sourceTree = "<group>"; };
 		E0CDAA8F286CAFAD002817C1 /* ValorantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E0CDAAA3286CB11E002817C1 /* UINavigationController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+extension.swift"; sourceTree = "<group>"; };
+		E0CDAAA5286CB14E002817C1 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		E0CDAAA7286CB190002817C1 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		E0CDAAA9286CB1A8002817C1 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		E0CDAAAB286CB1C6002817C1 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		E0CDAAAD286CB1E1002817C1 /* WireframeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeInterface.swift; sourceTree = "<group>"; };
+		E0CDAAB1286CB24A002817C1 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		E0CDAAB3286CB260002817C1 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		E0CDAAB8286CB282002817C1 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		E0CDAABB286CB387002817C1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E0CDAABE286CB720002817C1 /* AgentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0CDAAC0286CBD2C002817C1 /* AgentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +116,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0955D02286DEAEF007CE233 /* SeeAgent */ = {
+			isa = PBXGroup;
+			children = (
+				E0955D03286DEAFB007CE233 /* View */,
+				E0955D06286DEB24007CE233 /* SeeAgentPresenter.swift */,
+				E0955D04286DEB10007CE233 /* SeeAgentWireframe.swift */,
+			);
+			path = SeeAgent;
+			sourceTree = "<group>";
+		};
+		E0955D03286DEAFB007CE233 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0955D09286DEC9D007CE233 /* SeeAgentViewController.swift */,
+				E0BED420286F2B3C00FE75B7 /* AbilitiesSegmentedControl.swift */,
+				E0BED422286F529D00FE75B7 /* ViewAbilities.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E0CDAA60286CAFA9002817C1 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +159,9 @@
 		E0CDAA6B286CAFA9002817C1 /* Valorant */ = {
 			isa = PBXGroup;
 			children = (
+				E0CDAABA286CB2C5002817C1 /* Entity */,
+				E0CDAA9F286CB0DE002817C1 /* Common */,
+				E0CDAA9C286CB0A6002817C1 /* Presentation */,
 				E0CDAA6C286CAFA9002817C1 /* AppDelegate.swift */,
 				E0CDAA6E286CAFA9002817C1 /* SceneDelegate.swift */,
 				E0CDAA70286CAFA9002817C1 /* ViewController.swift */,
@@ -125,6 +188,83 @@
 				E0CDAA8F286CAFAD002817C1 /* ValorantUITestsLaunchTests.swift */,
 			);
 			path = ValorantUITests;
+			sourceTree = "<group>";
+		};
+		E0CDAA9C286CB0A6002817C1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E0955D02286DEAEF007CE233 /* SeeAgent */,
+				E0CDAAAF286CB22D002817C1 /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E0CDAA9F286CB0DE002817C1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E0CDAAA0286CB0E8002817C1 /* Extensions */,
+				E0CDAAA1286CB0F9002817C1 /* Interface */,
+				E0955CFC286DCA9E007CE233 /* MenuSegmentedControl.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E0CDAAA0286CB0E8002817C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E0CDAAA3286CB11E002817C1 /* UINavigationController+extension.swift */,
+				E0CDAAA5286CB14E002817C1 /* UIViewController+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E0CDAAA1286CB0F9002817C1 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E0CDAAA7286CB190002817C1 /* InteractorInterface.swift */,
+				E0CDAAA9286CB1A8002817C1 /* PresenterInterface.swift */,
+				E0CDAAAB286CB1C6002817C1 /* ViewInterface.swift */,
+				E0CDAAAD286CB1E1002817C1 /* WireframeInterface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		E0CDAAAF286CB22D002817C1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E0CDAAB0286CB233002817C1 /* View */,
+				E0CDAAB1286CB24A002817C1 /* HomeInteractor.swift */,
+				E0CDAAB3286CB260002817C1 /* HomePresenter.swift */,
+				E0CDAAB8286CB282002817C1 /* HomeWireframe.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E0CDAAB0286CB233002817C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0CDAABD286CB68D002817C1 /* Cell */,
+				E0CDAABB286CB387002817C1 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0CDAABA286CB2C5002817C1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E0CDAAC0286CBD2C002817C1 /* AgentsModel.swift */,
+				E0955D00286DDC89007CE233 /* WeaponModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E0CDAABD286CB68D002817C1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E0CDAABE286CB720002817C1 /* AgentCollectionViewCell.swift */,
+				E0955CFE286DDA6F007CE233 /* WeaponCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +398,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0BED423286F529D00FE75B7 /* ViewAbilities.swift in Sources */,
+				E0CDAAA8286CB190002817C1 /* InteractorInterface.swift in Sources */,
+				E0955CFF286DDA6F007CE233 /* WeaponCollectionViewCell.swift in Sources */,
 				E0CDAA71286CAFA9002817C1 /* ViewController.swift in Sources */,
+				E0CDAAAC286CB1C6002817C1 /* ViewInterface.swift in Sources */,
+				E0CDAAB2286CB24A002817C1 /* HomeInteractor.swift in Sources */,
+				E0CDAAAE286CB1E1002817C1 /* WireframeInterface.swift in Sources */,
+				E0CDAAB9286CB282002817C1 /* HomeWireframe.swift in Sources */,
+				E0CDAAA4286CB11E002817C1 /* UINavigationController+extension.swift in Sources */,
+				E0955CFD286DCA9E007CE233 /* MenuSegmentedControl.swift in Sources */,
+				E0BED421286F2B3C00FE75B7 /* AbilitiesSegmentedControl.swift in Sources */,
+				E0CDAABF286CB720002817C1 /* AgentCollectionViewCell.swift in Sources */,
+				E0CDAAC1286CBD2C002817C1 /* AgentsModel.swift in Sources */,
+				E0CDAAA6286CB14E002817C1 /* UIViewController+extension.swift in Sources */,
 				E0CDAA6D286CAFA9002817C1 /* AppDelegate.swift in Sources */,
+				E0955D01286DDC89007CE233 /* WeaponModel.swift in Sources */,
+				E0955D0A286DEC9D007CE233 /* SeeAgentViewController.swift in Sources */,
 				E0CDAA6F286CAFA9002817C1 /* SceneDelegate.swift in Sources */,
+				E0CDAAAA286CB1A8002817C1 /* PresenterInterface.swift in Sources */,
+				E0955D05286DEB10007CE233 /* SeeAgentWireframe.swift in Sources */,
+				E0CDAABC286CB387002817C1 /* HomeViewController.swift in Sources */,
+				E0955D07286DEB24007CE233 /* SeeAgentPresenter.swift in Sources */,
+				E0CDAAB4286CB260002817C1 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +605,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,7 +617,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,6 +634,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,7 +646,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
